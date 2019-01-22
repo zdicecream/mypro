@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 @SpringBootApplication
-@MapperScan("com.example.mypro.mapper")
+@MapperScan("com.example.mypro.dao.mapper")
 public class MyproApplication {
 
 	public static void main(String[] args) {
