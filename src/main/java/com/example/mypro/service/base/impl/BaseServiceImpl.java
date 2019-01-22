@@ -1,6 +1,6 @@
 package com.example.mypro.service.base.impl;
 
-import com.example.mypro.mapper.Mapper;
+import com.example.mypro.dao.mapper.Mapper;
 import com.example.mypro.service.base.BaseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

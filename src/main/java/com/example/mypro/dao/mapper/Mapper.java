@@ -1,4 +1,4 @@
-package com.example.mypro.mapper;
+package com.example.mypro.dao.mapper;
 
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 

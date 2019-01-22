@@ -1,6 +1,6 @@
 package com.example.mypro.service.base;
 
-import com.example.mypro.mapper.Mapper;
+import com.example.mypro.dao.mapper.Mapper;
 
 import java.io.Serializable;
 import java.util.List;
