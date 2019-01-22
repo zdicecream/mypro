@@ -108,9 +108,23 @@
 
         </dependency>
 
-
-
-    </dependencies>
+		<!-- 引入redis依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<version>2.1.2.RELEASE</version>
+		</dependency>
+		<!-- 热部署 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.xmlunit</groupId>
+			<artifactId>xmlunit-core</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -129,6 +143,13 @@
                     <verbose>true</verbose>
                 </configuration>
             </plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+				</configuration>
+			</plugin>
 		</plugins>
 		<!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
 		<resources>
