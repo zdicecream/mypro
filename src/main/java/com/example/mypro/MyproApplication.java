@@ -12,4 +12,6 @@ public class MyproApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MyproApplication.class, args);
 	}
+
+
 }

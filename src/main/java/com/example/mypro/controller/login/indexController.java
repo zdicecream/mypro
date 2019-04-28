@@ -82,5 +82,22 @@ public class indexController extends BaseController{
         indexService.delete(id);
         return new BaseResponse<String>().SuccResponse("");
     }
+
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    public BaseResponse<String> login(String username,String password){
+        User userPara =  new User();
+        userPara.setName(username);
+//        userPara.setPassword(password);
+        User user = indexService.getOne(userPara);
+        if(user!=null && user.getPassword().equals(password)){
+            redisTemplate.opsForValue().set("user",username);
+            log.info("ss");
+            return new BaseResponse<String>().SuccResponse("");
+        }else{
+            log.info("ffs");
+            return new BaseResponse<String>().falseResponse();
+        }
+
+    }
 }
 

@@ -56,7 +56,7 @@ public class BaseResponse<T> implements Serializable{
     }
 
     public BaseResponse<T> falseResponse() {
-        this.success = true;
+        this.success = false;
         this.code = falseCode;
         this.msg = falseMsg;
         return this;

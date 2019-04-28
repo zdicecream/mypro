@@ -15,4 +15,5 @@ public interface BaseService<T> {
     public T getById(Serializable id);
     public List<T> findAll();
     public Mapper<T> getMapper();
+    public T getOne(T t);
 }

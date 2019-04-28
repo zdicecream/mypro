@@ -60,4 +60,9 @@ public  class BaseServiceImpl<T> implements BaseService<T> {
     public Mapper<T> getMapper() {
         return mapper;
     }
+
+    @Override
+    public T getOne(T t) {
+        return mapper.selectOne(t);
+    }
 }
