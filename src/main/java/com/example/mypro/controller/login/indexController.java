@@ -6,6 +6,8 @@ import com.example.mypro.dao.entity.User;
 import com.example.mypro.service.index.IndexService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -22,20 +24,46 @@ public class indexController extends BaseController{
     @Autowired
     private RedisTemplate<Serializable,Object> redisTemplate;
 //    测试reids
-//    @RequestMapping("/set")
-//    public String setRedis(){
-//        User user = new User();
-//        user.setName("xiaohu");
-//        user.setMoney((long) 10000);
-//        user.setAddress("中国中国中国中国111");
-//        user.setPassword("root");
-//        redisTemplate.opsForValue().set("user1",user);
-//        return "存储";
-//    }
-//    @RequestMapping("/get")
-//    public Object getRedis(){
-//        return redisTemplate.opsForValue().get("user1");
-//    }
+    @RequestMapping("/set")
+    public String setRedis(){
+        User user = new User();
+        user.setName("xiaohu");
+        user.setMoney((long) 10000);
+        user.setAddress("中国中国中国中国111");
+        user.setPassword("root");
+        redisTemplate.opsForValue().set("user1",user);
+        return "存储";
+    }
+    @RequestMapping("/get")
+    public Object getRedis(){
+        return redisTemplate.opsForValue().get("user1");
+    }
+
+    @RequestMapping("/getRe")
+    @Cacheable( value = "user-key")
+    public Object testGetRedis(){
+        return indexService.findAll();
+
+    }
+
+    @RequestMapping("/getRe1")
+    public Object testGetRedis1(){
+        return indexService.findAll();
+
+    }
+
+    @RequestMapping("/setRe")
+    public String testSetRedis(){
+        User user = new User();
+        user.setName("xiaohu");
+        user.setMoney((long) 10000);
+        user.setAddress("中国中国中国中国111");
+        user.setPassword("root");
+        indexService.save(user);
+
+        return "success";
+
+    }
 
 //    测试主页
 //    @RequestMapping("/")

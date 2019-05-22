@@ -107,7 +107,13 @@
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 			<version>${redis.version}</version>
 		</dependency>
-		<!-- 热部署 -->
+		<!-- 引入redis作为共享缓存 -->
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-data-redis</artifactId>
+		</dependency>
+
+		<!-- 热部署 生产环境不生效-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -118,6 +124,20 @@
 			<groupId>org.xmlunit</groupId>
 			<artifactId>xmlunit-core</artifactId>
 		</dependency>
+		<!-- 邮件 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
+
+
+		<!-- RabbitMQ
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-amqp</artifactId>
+		</dependency>
+		-->
 	</dependencies>
 
 	<build>
