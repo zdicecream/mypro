@@ -1,8 +1,9 @@
 # mypro
 zd 项目日志
-
+## 背景介绍
 学习VUE REACT 后忽然觉得自己方向错了，重新学习后端
-技术栈
+
+## 技术栈
 UI  elementUi
 前端js   vue.js(MVVM) + axios
 后端js  node.js
