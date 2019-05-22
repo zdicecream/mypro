@@ -1,7 +1,7 @@
 # mypro
 zd 项目日志
 ## 背景介绍
-学习VUE REACT 后忽然觉得自己方向错了，重新学习后端
+致力于学习前端VUE REACT 和springboot后端的项目
 
 ## 🔗技术栈
 - UI  elementUi
