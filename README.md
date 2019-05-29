@@ -10,7 +10,7 @@ zd 项目日志
 - springBoot
 - 持久层  mybatis mybatis-generator mybatis-plus
 - 数据库  mysql alibaba-druid
-- 缓存  redis
+- 缓存/session共享  redis
 - 搜索引擎 Elasticsearch/Solr
 - 集群  dubbo zookeeper/springcloud
 - 工具 idea
@@ -26,5 +26,4 @@ zd 项目日志
 - docker部署
 - rest api
 - 权限 shiro
-- 身份验证 token
 - 最后进行分布式模块化改造
