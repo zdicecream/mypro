@@ -28,6 +28,9 @@ public class BaseResponse<T> implements Serializable{
     public static final String falseCode = "400";
     public static final String falseMsg = "无效请求！";
 
+    public static final String errorCode = "500";
+    public static final String errorMsg = "内部错误！";
+
     /*** 是否成功*/
     private boolean success;
     private String code;

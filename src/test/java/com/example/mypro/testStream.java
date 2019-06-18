@@ -12,7 +12,7 @@ public class testStream {
         list.add("2");
         list.add("3");
         list.add("4");
-        list.add("");
+        list.add("23");
         Stream s =  list.stream();
 //        System.out.println(s.findFirst().equals("2"));
 //        s.forEach(System.out::println);

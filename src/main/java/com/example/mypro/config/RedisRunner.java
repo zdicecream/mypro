@@ -1,7 +1,8 @@
-package com.example.mypro.utils;
+package com.example.mypro.config;
 
 import com.example.mypro.dao.entity.Menu;
 import com.example.mypro.service.system.MenuService;
+import com.example.mypro.utils.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;

@@ -4,6 +4,7 @@ import com.example.mypro.controller.base.BaseController;
 import com.example.mypro.controller.base.BaseResponse;
 import com.example.mypro.dao.entity.User;
 import com.example.mypro.service.index.IndexService;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -55,6 +56,7 @@ public class indexController extends BaseController{
 //        modelAndView.setViewName("show");
 //        return modelAndView;
 //    }
+    @ApiOperation(value = "获取用户列表",notes = "获取用户全部列表")
     @RequestMapping(value = "/getUserJson",method = RequestMethod.GET)
     public BaseResponse<List<User>> getUserJson() {
         List<User> list = indexService.findAll();
@@ -70,6 +72,11 @@ public class indexController extends BaseController{
     @RequestMapping(value = "/addUser",method = RequestMethod.POST)
     public BaseResponse<String> addUser(User user){
         return new BaseResponse<String>().SuccResponse("");
+    }
+
+    @RequestMapping(value = "/testUserException",method = RequestMethod.GET)
+    public String testUserException() throws Exception {
+        throw new Exception("错误");
     }
 
     @RequestMapping(value = "/editUser",method = RequestMethod.PUT)

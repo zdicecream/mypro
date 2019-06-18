@@ -1,4 +1,4 @@
-package com.example.mypro.utils;
+package com.example.mypro.config;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
