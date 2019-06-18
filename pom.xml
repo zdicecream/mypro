@@ -67,7 +67,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>5.1.10</scope>
+
 		</dependency>
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -124,6 +124,11 @@
 			<groupId>org.xmlunit</groupId>
 			<artifactId>xmlunit-core</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcprov-jdk15on</artifactId>
+			<version>1.55</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -148,6 +153,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<fork>true</fork>
+					<mainClass>com.example.mypro.MyproApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
