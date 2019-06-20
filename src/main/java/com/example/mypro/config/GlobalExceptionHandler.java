@@ -47,7 +47,7 @@ public class GlobalExceptionHandler {
      *  vue项目与后端项目整合是通过install打包前端项目，然后把打包完产生的dist文件夹下的static文件夹和index.html放到后端项目的static路径下，其实最终整个前端项目都被编译成js文件，由index.html进行渲染。
      *  因此我这里通过捕获404HTTP错误状态码自定义页面，将页面指向了index.html，由其进行解析。
      *  -----------------------暂时不确定用不用------------------
-     * @return
+     *
      */
     @Bean
     public WebServerFactoryCustomizer<ConfigurableWebServerFactory> webServerFactoryCustomizer(){

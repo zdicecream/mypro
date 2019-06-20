@@ -140,6 +140,16 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.2.2</version>
 		</dependency>
+		<!-- 数据库版本控制工具flyway-->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
+		<!--定时任务-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-quartz</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -167,7 +177,13 @@
 					<mainClass>com.example.mypro.MyproApplication</mainClass>
 				</configuration>
 			</plugin>
-		</plugins>
+			<!--<plugin>-->
+				<!--<groupId>org.flywaydb</groupId>-->
+				<!--<artifactId>flyway-maven-plugin</artifactId>-->
+			<!--</plugin>-->
+
+
+        </plugins>
 		<!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
 		<resources>
 			<resource>

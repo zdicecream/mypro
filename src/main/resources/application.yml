@@ -9,9 +9,6 @@ logging:
   level:
     com.devloper.joker: debug
 
-#    devtools:
-#        restart:
-#          enabled: false
 spring:          #表示该配置直接为Spring容器负责处理
 #  devtools:
 #     restart:
@@ -28,6 +25,12 @@ spring:          #表示该配置直接为Spring容器负责处理
       initial-size: 5     #初始化提供的连接数
       max-total: 5          #最大的连接数
       max-wait-millis: 200        #等待连接获取的最大超时时间
+  flyway:  #flyway数据库版本管理
+    clean-disabled: true #禁用clean操作
+    enabled: false #使flyway生效
+    baseline-on-migrate: true #初始化时如果不存在迁移记录表，默认新建一个
+    out-of-order: true #防止开发环境下漏掉没来得及apply的文件，产品环境最好设为false
+    locations: classpath:/db/migration
   redis:
     #redis数据库地址
     host: localhost
@@ -36,8 +39,6 @@ spring:          #表示该配置直接为Spring容器负责处理
 #    timeout: 1000
     #redis数据库索引，默认0
     database: 0
-
-
 
 #mybatis
 mybatis-plus:
@@ -69,3 +70,6 @@ mybatis-plus:
   configuration:
     map-underscore-to-camel-case: true
     cache-enabled: false
+
+
+

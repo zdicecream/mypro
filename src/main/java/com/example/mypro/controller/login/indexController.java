@@ -91,7 +91,7 @@ public class indexController extends BaseController{
     }
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public BaseResponse<String> login(String username,String password){
+    public BaseResponse<String> login(@RequestParam("username")String username,@RequestParam("password") String password){
         User userPara =  new User();
         userPara.setName(username);
 //        userPara.setPassword(password);
